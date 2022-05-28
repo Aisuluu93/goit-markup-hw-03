@@ -18,6 +18,10 @@ body {
 }
 h2, h3, p {
     margin-top: 0;
+    margin-bottom: 0;
+}
+img {
+    display: block;
 }
 .list {
     list-style: none;
@@ -25,7 +29,7 @@ h2, h3, p {
     margin: 0;
 }
 .container {
-    width: 1230px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -33,6 +37,7 @@ h2, h3, p {
 }
 .section {
     padding-bottom: 94px;
+    padding-top: 94px;
 }
 
 /* header */
@@ -46,17 +51,10 @@ h2, h3, p {
 .nav {
     display: flex;
 }
-
-.header-logo{
+.nav .logo{
     margin-right: 92px;
-    padding-bottom: 25px;
-    padding-top: 24px;
-}
-.header .logo {
     padding-top: 24px;
     padding-bottom: 25px;
-}
-.logo{
     font-family: Raleway, sans-serif;
     text-decoration: none;
     font-size: 26px;
@@ -72,9 +70,6 @@ h2, h3, p {
 .page-nav{
     display: flex;
 }
-.page-nav .item:not(first-child){
-    margin-right: 50px;
-}
 .page-nav .link{
     padding-bottom: 32px;
     padding-top: 32px;
@@ -85,6 +80,12 @@ h2, h3, p {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+}
+.page-nav .item{
+    margin-right: 50px;
+}
+.page-nav .item:last-child{
+    margin-right: 0;
 }
 .page-nav .link:hover,
 .page-nav .link:focus {
@@ -119,9 +120,10 @@ h2, h3, p {
 .hero{
     text-align: center;
     background-color: var(--background-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero .title{
-    padding-top: 200px;
     margin-top: 0;
     margin-bottom: 30px;
     color: var(--button-color);
@@ -135,7 +137,6 @@ h2, h3, p {
     border-radius: 4px;
     border: 1px solid transparent;
     padding: 10px 32px;
-    margin-bottom: 200px;
     box-shadow: 0px 4px 4px var(--box-shadow);
     min-width: 136px;
     text-align: center;
@@ -184,18 +185,15 @@ h2, h3, p {
 }
 .advantages{
     display: flex;
-    justify-content: space-between;
 }
 .advantages .item{
-    display: block;
+    margin-right: 30px;
     width: 270px;
 }
-.advantages .item:not(first-child)
-.advantages .item:not(last-child){
-    margin-left: 30px;
+.advantages .item:last-child{
+    margin-right: 0;
 }
 .advantages .policy-p{  
-    margin-top: 0;
     color: var(--text-color);
     font-size: 14px;
     line-height: 1.7;
@@ -239,27 +237,25 @@ h2, h3, p {
     letter-spacing: 0.03em;
 }
 .card{
-    display: grid;
-    margin-top: 50px;
     width: 270px;
-    border: 0px solid transparent;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .card-list {
     display: inline-flex;
+    margin-top: 50px;
 }
 .card-list .item +.item{
     margin-left: 30px;
 }
 .card .description{
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: var(--button-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 .team-member{
-    margin: 0;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -267,8 +263,6 @@ h2, h3, p {
     letter-spacing: 0.03em;
 }
 .team-position{
-    margin: 0;
-    padding-bottom: 30px;
     color: var(--text-color);
     font-size: 16px;
     line-height: 1.2;
@@ -293,16 +287,16 @@ h2, h3, p {
 .project-btn{
     display: flex;
     justify-content: center;
-    padding-top: 94px;
-    padding-bottom: 34px;
+    margin-bottom: 34px;
 }
 .project-btn .item{
+    margin-right: 8px;
     background: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
-.project-btn .item:not(last-child){
-    margin-right: 8px;
+.project-btn .item:last-child{
+    margin-right: 0px;
 }
 .project-button{
     padding: 6px 22px;
@@ -330,9 +324,8 @@ h2, h3, p {
     border-top: transparent;
 }
 .projects{
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 .projects .item:nth-child(3n) {
     margin-right: 0px;
@@ -352,7 +345,7 @@ h2, h3, p {
     display: block;
 }
 .projects .name{
-    margin-bottom: 0;
+    margin-bottom: 4px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -371,15 +364,19 @@ h2, h3, p {
 
 /* footer */
 .footer{
-    background-color: var(--background-color);
-}
-.footer .container{
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: var(--background-color);
 }
 .footer .logo{
     display: block;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-right: 92px;
+    font-family: Raleway, sans-serif;
+    text-decoration: none;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
 }
 .foot-web{
     color: var(--accent-color);
@@ -394,16 +391,17 @@ h2, h3, p {
     letter-spacing: 0.03em;
 }
 .adress-p{
-    margin-bottom: 0;
+    margin-bottom: 9px;
     color: var(--button-color);
 }
 .footer-contact .link{
     text-decoration: none;
     color: var(--footer-contact-color);
 }
-.footer-contact .link:not(first-child){
-    padding-bottom: 10px;
+.footer-contact .item:first-child{
+    margin-bottom: 9px;
 }
+
 .footer-contact .link:hover,
 .footer-contact .link:focus {
     color: var(--accent-color);
